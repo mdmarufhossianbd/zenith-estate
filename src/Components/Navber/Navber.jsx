@@ -12,7 +12,7 @@ const Navber = () => {
     </>
 
     return (
-        <div className=" lg:px-[300px] md:px-20 px-4 py-2 bg-[#F3F3FA]">
+        <div className="xl:px-[300px] lg:px-[200px] md:px-20 px-4 py-2 bg-[#F3F3FA]">
             <div className="navbar flex justify-between items-center">
                 <div className="dropdown lg:hidden">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +30,7 @@ const Navber = () => {
                         {links}
                     </div>
                 </div>
-                <div>
+                <div className="lg:ml-4">
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
