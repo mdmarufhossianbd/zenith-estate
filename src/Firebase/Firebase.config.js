@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD5Dj946atfEIcNTJkObMBn_CjosgajoXQ",
-  authDomain: "zenith-estate-19bb2.firebaseapp.com",
-  projectId: "zenith-estate-19bb2",
-  storageBucket: "zenith-estate-19bb2.appspot.com",
-  messagingSenderId: "1008085205491",
-  appId: "1:1008085205491:web:36c642df808643bb5f9286"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

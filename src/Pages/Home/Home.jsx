@@ -7,10 +7,10 @@ const Home = () => {
     return (
         <div>
             <Slider></Slider>
-            <div className="bg-[#E0DEF7] border-2 border-[E0DEF7] lg:px-[300px] flex py-20">
-                <div className="flex flex-col justify-around">
-                    <div>
-                        <h2 className="text-6xl font-bold mb-10">The new way to find your new home</h2>
+            <div className="bg-[#E0DEF7] border-2 border-[E0DEF7] xl:px-[300px] md:px-[50px] lg:flex py-20">
+                <div className="md:flex flex-col justify-around">
+                    <div className="text-center lg:text-left">
+                        <h2 className="lg:text-6xl md:text-4xl font-bold mb-10">The new way to find your new home</h2>
                         <p>Find your dream place to live in with more than 10k+ properties listed.</p>
                     </div>
                     <div className="flex justify-around text-center">
@@ -32,8 +32,8 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div>
-                    <img className="rounded" src={house} alt="" />
+                <div className="mt-5 lg:mt-0">
+                    <img className="rounded-3xl w-full md:px-10" src={house} alt="" />
                 </div>
             </div>
         </div>
