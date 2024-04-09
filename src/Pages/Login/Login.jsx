@@ -1,14 +1,21 @@
+import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { useContext } from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import app from "../../Firebase/Firebase.config";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Login = () => {
 
-    const { loginUser } = useContext(AuthContext)
+    const auth = getAuth(app);
+    const googleProvider = new GoogleAuthProvider;
+    const githubProvider = new GithubAuthProvider;
 
+    const { loginUser, } = useContext(AuthContext)
+
+    // Email & Password Login
     const handlelogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -24,8 +31,33 @@ const Login = () => {
                 console.log(error.message);
             })
     }
+
+    // Goole Login
+    const handleLoginWithGoogle = () => {
+        signInWithPopup(auth, googleProvider)
+        .then(result=>{
+            result.user
+            console.log("Your account Create sucessfully via Google.",result);
+        })
+        .catch(error=>{
+            error.message
+            console.log("Google Login Problem",error);
+        })
+    }
+    // GitHub Login
+    const handleLoginWithGithub = () => {
+        signInWithPopup(auth, githubProvider)
+        .then(result=>{
+            const githubLoginUser = result.user
+            console.log("Login with Github Successfully", githubLoginUser);
+        })
+        .catch(error=>{
+            error.message
+            console.log("Problem With Login github", error);
+        })
+    }
     return (
-        <div className="h-screen w-screen bg-[#000] bg-[url('https://i.ibb.co/D4p1Y1x/real-state-banner-2.png')] bg-blend-screen bg-cover bg-no-repeat lg:pt-[10%] md:pt-[20%] pt-[20%]">
+        <div className="h-screen bg-[#000] bg-[url('https://i.ibb.co/D4p1Y1x/real-state-banner-2.png')] bg-blend-screen bg-cover bg-no-repeat lg:pt-[10%] md:pt-[20%] pt-[20%]">
             <div className=" xl:w-1/3 lg:w-1/2 md:w-1/2 mx-5 bg-[#49494985] lg:mx-auto md:mx-auto text-center p-10 rounded-md">
                 <h2 className="text-4xl text-white font-bold">Please Login</h2>
                 <hr className="mx-[30%] my-5" />
@@ -40,9 +72,9 @@ const Login = () => {
                     </div>
                 </form>
                 <div className="text-white flex flex-col items-center justify-center gap-4 p-4">
-                    <button className="flex gap-3 text-xl items-center bg-[#5245ED] p-2 rounded hover:bg-purple-600"><AiFillGoogleCircle /> Log in with Google 
+                    <button onClick={handleLoginWithGoogle} className="flex gap-3 text-xl items-center bg-[#5245ED] p-2 rounded hover:bg-purple-600"><AiFillGoogleCircle /> Log in with Google 
                     </button>
-                    <button className="flex gap-3 text-xl items-center bg-purple-600 p-2 rounded hover:bg-[#5245ED]"><FaGithub /> Log in with GitHub 
+                    <button onClick={handleLoginWithGithub} className="flex gap-3 text-xl items-center bg-purple-600 p-2 rounded hover:bg-[#5245ED]"><FaGithub /> Log in with GitHub 
                     </button>
                     
                 </div>
