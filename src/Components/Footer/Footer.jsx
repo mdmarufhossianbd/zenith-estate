@@ -2,7 +2,6 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
     return (
         <div className="bg-[#181A20]">

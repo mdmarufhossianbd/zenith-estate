@@ -1,9 +1,14 @@
+import { useLoaderData } from "react-router-dom";
+import HouseCard from "../../Components/ResidentialHomes/HouseCard";
 import Slider from "../../Components/Slider/Slider";
 import icon1 from "../../assets/images/Icon (1).png";
 import icon2 from "../../assets/images/Icon.png";
 import icon3 from "../../assets/images/Iconicon (1).png";
 import house from "../../assets/images/one (3).jpg";
 const Home = () => {
+
+    const houses = useLoaderData();
+   
     return (
         <div>
             <Slider></Slider>
@@ -35,6 +40,11 @@ const Home = () => {
                 <div className="mt-5 lg:mt-0">
                     <img className="rounded-3xl w-full md:px-10" src={house} alt="" />
                 </div>
+            </div>
+            <div className="max-w-7xl lg:mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-10 my-10 mx-5">
+                {
+                    houses.map(house => <HouseCard key={house.id} house={house}></HouseCard>)
+                }
             </div>
         </div>
     );

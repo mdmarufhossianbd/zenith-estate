@@ -3,24 +3,24 @@
         "estate_title": "Cozy Family Home",
         "id": 1,
         "segment_name": "Single-family homes",
-        "description": "This cozy family home is a perfect retreat for those seeking comfort and tranquility. Situated in a suburban neighborhood in Anytown, this charming residence offers ample space for a growing family. With three bedrooms, two bathrooms, and a spacious backyard, it provides the ideal setting for creating lasting memories. Built in 1995, this home boasts timeless architecture and modern amenities. The two-car garage ensures convenient parking, while the proximity to the Anytown School District adds to its appeal for families with children. Whether it's enjoying family dinners in the spacious kitchen, relaxing in the backyard oasis, or simply unwinding in the cozy living room, this home offers a warm and inviting atmosphere for its occupants.",
+        "description": "This cozy family home is a perfect retreat for those seeking comfort and tranquility. Situated in a suburban neighborhood in Anytown, this charming residence offers ample space for a growing family. With three Bedrooms, , two bathrooms, and a spacious backyard, it provides the ideal setting for creating lasting memories. Built in 1995, this home boasts timeless architecture and modern amenities. The two-car garage ensures convenient parking, while the proximity to the Anytown School District adds to its appeal for families with children. Whether it's enjoying family dinners in the spacious kitchen, relaxing in the backyard oasis, or simply unwinding in the cozy living room, this home offers a warm and inviting atmosphere for its occupants.",
         "price": "$350,000",
         "status": "sale",
         "area": "2,500 sq ft",
         "location": "Suburban neighborhood, Anytown",
-        "facilities": ["3 bedrooms", "2 bathrooms", "backyard"]
+        "facilities": ["3 Bedrooms, ", "2 Bathrooms, ", "Backyard"]
     },
     {
         "image": "https://i.ibb.co/KzBd4bB/050.jpg",
         "estate_title": "Modern City Apartment",
         "id": 2,
         "segment_name": "Apartments",
-        "description": "This modern city apartment offers the ultimate urban living experience. Located in the heart of downtown Anytown, this stylish residence features sleek design elements and panoramic city views. With two bedrooms, a spacious living area, and state-of-the-art appliances, it provides the perfect blend of luxury and convenience. The building amenities include a fitness center, rooftop terrace, and 24/7 concierge service, ensuring a comfortable and secure lifestyle for residents. Whether it's exploring the vibrant city scene or relaxing in the comfort of your own home, this apartment offers a sophisticated retreat for those seeking the best of city living.",
+        "description": "This modern city apartment offers the ultimate urban living experience. Located in the heart of downtown Anytown, this stylish residence features sleek design elements and panoramic city views. With two Bedrooms, , a spacious living area, and state-of-the-art appliances, it provides the perfect blend of luxury and convenience. The building amenities include a fitness center, rooftop terrace, and 24/7 concierge service, ensuring a comfortable and secure lifestyle for residents. Whether it's exploring the vibrant city scene or relaxing in the comfort of your own home, this apartment offers a sophisticated retreat for those seeking the best of city living.",
         "price": "$500,000",
         "status": "sale",
         "area": "1,200 sq ft",
         "location": "Downtown Anytown",
-        "facilities": ["2 bedrooms", "modern appliances", "city views"]
+        "facilities": ["2 Bedrooms, ", "Modern appliances, ", "City views"]
     },
     {
         "image": "https://i.ibb.co/prG01s0/028.jpg",
@@ -32,7 +32,7 @@
         "status": "rent",
         "area": "1,000 sq ft",
         "location": "Suburban neighborhood, Anytown",
-        "facilities": ["1 bedroom", "updated kitchen", "lush backyard"]
+        "facilities": ["1 Bedroom, ", "Updated kitchen, ", "Lush backyard"]
     },
     {
         "image": "https://i.ibb.co/9YtMVpd/103.jpg",
@@ -44,19 +44,19 @@
         "status": "sale",
         "area": "5,000 sq ft",
         "location": "Anytown Estates",
-        "facilities": ["4 bedrooms", "swimming pool", "gated community"]
+        "facilities": ["4 Bedrooms, ", "Swimming pool, ", "Gated community"]
     },
     {
         "image": "https://i.ibb.co/RBtZJXq/115.jpg",
         "estate_title": "Rustic Mountain Retreat",
         "id": 5,
         "segment_name": "Mountain Homes",
-        "description": "Escape to the serene beauty of this rustic mountain retreat nestled in the foothills of Anytown. Surrounded by towering pine trees and panoramic views of the mountains, this cozy cabin offers a peaceful respite from the stresses of everyday life. The interior features exposed wooden beams, a stone fireplace, and charming decor that reflects the natural surroundings. With two bedrooms, a loft area, and a spacious deck, there's plenty of room for family and friends to gather and create lasting memories. Whether it's hiking through the nearby trails, roasting marshmallows around the fire pit, or simply enjoying the breathtaking scenery, this mountain retreat offers a truly magical experience for nature lovers.",
+        "description": "Escape to the serene beauty of this rustic mountain retreat nestled in the foothills of Anytown. Surrounded by towering pine trees and panoramic views of the mountains, this cozy cabin offers a peaceful respite from the stresses of everyday life. The interior features exposed wooden beams, a stone fireplace, and charming decor that reflects the natural surroundings. With two Bedrooms, a loft area, and a spacious deck, there's plenty of room for family and friends to gather and create lasting memories. Whether it's hiking through the nearby trails, roasting marshmallows around the fire pit, or simply enjoying the breathtaking scenery, this mountain retreat offers a truly magical experience for nature lovers.",
         "price": "$300,000",
         "status": "rent",
         "area": "1,800 sq ft",
         "location": "Foothills of Anytown",
-        "facilities": ["2 bedrooms", "stone fireplace", "spacious deck"]
+        "facilities": ["2 Bedrooms, ", "Stone fireplace, ", "Spacious deck"]
     },
     {
         "image": "https://i.ibb.co/FzhBwyN/113.jpg",
@@ -68,6 +68,6 @@
         "status": "sale",
         "area": "1,500 sq ft",
         "location": "Anytown Harbor",
-        "facilities": ["2 bedrooms", "waterfront views", "private balcony"]
+        "facilities": ["2 Bedrooms, ", "Waterfront views, ", "Private balcony"]
     }
 ]
