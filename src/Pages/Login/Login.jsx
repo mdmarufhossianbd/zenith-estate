@@ -2,18 +2,21 @@ import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from
 import { useContext } from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import app from "../../Firebase/Firebase.config";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Login = () => {
-
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider;
     const githubProvider = new GithubAuthProvider;
-
     const { loginUser, } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const location = useLocation();
+    
 
     // Email & Password Login
     const handlelogin = e => {
@@ -23,12 +26,18 @@ const Login = () => {
         console.log(email, password);
         loginUser(email, password)
             .then(result => {
-                result.user
-                console.log(result, "user create successfully")
+                if(result.user){
+                    const toastMessage = () => toast("Your account login Successfully");                    
+                    toastMessage();
+                    navigate(location?.state ? location.state : "/")
+                }         
             })
             .catch(error => {
                 error.message
-                console.log(error.message);
+                if(error.message){
+                    const toastMessage = () => toast.error("Please check your email or password.");                    
+                    toastMessage();
+                } 
             })
     }
 
@@ -36,24 +45,36 @@ const Login = () => {
     const handleLoginWithGoogle = () => {
         signInWithPopup(auth, googleProvider)
         .then(result=>{
-            result.user
-            console.log("Your account Create sucessfully via Google.",result);
+            if(result.user){
+                const toastMessage = () => toast("Your account login Successfully");                    
+                toastMessage();                
+                navigate(location?.state ? location.state : "/")
+            }
         })
         .catch(error=>{
-            error.message
-            console.log("Google Login Problem",error);
+            if(error.message){
+                const toastMessage = () => toast.error("Please check your email or password.");                    
+                toastMessage();
+            }
         })
     }
+
     // GitHub Login
     const handleLoginWithGithub = () => {
         signInWithPopup(auth, githubProvider)
         .then(result=>{
-            const githubLoginUser = result.user
-            console.log("Login with Github Successfully", githubLoginUser);
+            // const githubLoginUser = result.user
+            if(result.user){
+                const toastMessage = () => toast("Your account login Successfully");                    
+                toastMessage();
+                navigate(location?.state ? location.state : "/")
+            }
         })
         .catch(error=>{
-            error.message
-            console.log("Problem With Login github", error);
+            if(error.message){
+                const toastMessage = () => toast.error("Please check your email or password.");                    
+                toastMessage();
+            }
         })
     }
     return (
@@ -63,7 +84,7 @@ const Login = () => {
                 <hr className="mx-[30%] my-5" />
                 <form onSubmit={handlelogin} >
                     <div className="flex flex-col gap-4 mt-8">
-
+                    <ToastContainer/>;
                         <input className="bg-[#100a5500] border-b-2 p-3 text-lg text-white placeholder:text-white rounded-md" type="email" name="email" placeholder="Your Email" />
                         <input className="bg-[#100a5500] border-b-2 p-3 text-lg text-white placeholder:text-white rounded-md" type="password" name="password" placeholder="Password" />
 

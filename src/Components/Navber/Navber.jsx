@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navber = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const links = <>
         <li><Link to={'/'}>Home</Link></li>
@@ -31,7 +41,8 @@ const Navber = () => {
                     </div>
                 </div>
                 <div className="lg:ml-4">
-                    <div className="dropdown dropdown-end">
+                    {
+                        user ? <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -43,9 +54,15 @@ const Navber = () => {
                                     Profile</a>
                             </li>
                             <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+                            <li>
+                                <Link onClick={handleLogOut}><button className="bg-[#403F3F] text-white py-3 px-6">Logout</button>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
+                    : <Link to={"/login"}><button className="bg-[#5245ED] text-white py-2 px-6 rounded hover:bg-[#100A55]">Login</button></Link>
+                    }
+                    
                 </div>
             </div>
 
