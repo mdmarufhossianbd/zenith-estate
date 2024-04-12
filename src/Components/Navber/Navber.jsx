@@ -22,7 +22,7 @@ const Navber = () => {
     </>
 
     return (
-        <div className="xl:px-[300px] lg:px-[200px] md:px-20 px-4 py-2 bg-[#F3F3FA]">
+        <div className="xl:px-[300px] lg:px-[200px] md:px-20 px-4 pt-3 bg-[#F3F3FA]">
             <div className="navbar flex justify-between items-center">
                 <div className="dropdown lg:hidden">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,15 +43,14 @@ const Navber = () => {
                 <div className="lg:ml-4">
                     {
                         user ? <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        <div tabIndex={0} role="button" className=" avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+                            <div className="w-10 rounded-full tooltip" data-tip="Name">
+                                <img src={user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
                             </div>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 absolute z-10">
                             <li>
-                                <a className="justify-between">
-                                    Profile</a>
+                                <Link>{user.displayName}</Link>
                             </li>
                             <li><a>Settings</a></li>
                             <li>
