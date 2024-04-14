@@ -17,8 +17,6 @@ const Navber = () => {
         <li><Link to={'/'}>Services</Link></li>
         <li><Link to={'/'}>About</Link></li>
         <li><Link to={'/'}>Contact</Link></li>
-        <li><Link to={'/login'}>Login</Link></li>
-        <li><Link to={'/register'}>Register</Link></li>
     </>
 
     return (
@@ -54,7 +52,7 @@ const Navber = () => {
                             </li>
                             <li><a>Settings</a></li>
                             <li>
-                                <Link onClick={handleLogOut}><button className="bg-[#403F3F] text-white py-3 px-6">Logout</button>
+                                <Link onClick={handleLogOut}><button >Logout</button>
                                 </Link>
                             </li>
                         </ul>
