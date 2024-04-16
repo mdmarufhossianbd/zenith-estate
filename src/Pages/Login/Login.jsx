@@ -6,6 +6,7 @@ import { IoEye, IoEyeOff } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PageTitle from "../../Components/PageTitle/PageTitle";
 import app from "../../Firebase/Firebase.config";
 import { AuthContext } from "../../Providers/AuthProvider";
 
@@ -82,6 +83,7 @@ const Login = () => {
     }
     return (
         <div className="bg-[#000] bg-[url('https://i.ibb.co/D4p1Y1x/real-state-banner-2.png')] bg-blend-screen bg-cover bg-no-repeat lg:pt-[10%] md:pt-[15%] pt-[20%]">
+            <PageTitle title="Login || Zenith Estate"></PageTitle>
             <div className=" xl:w-1/3 lg:w-1/2 md:w-1/2 mx-5 bg-[#49494985] lg:mx-auto md:mx-auto text-center p-10 rounded-md">
                 <h2 className="text-4xl text-white font-bold">Please Login</h2>
                 <hr className="mx-[30%] my-5" />

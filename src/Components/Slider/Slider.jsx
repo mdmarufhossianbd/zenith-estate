@@ -12,7 +12,7 @@ import img2 from './../../assets/images/028.jpg';
 
 const Slider = () => {
     return (
-        <div className='px-[300px] bg-[#F3F3FA] py-10'>
+        <div className='xl:px-[300px] h-full lg:px-[200px] md:px-[10%] px-[5%] bg-[#F3F3FA] py-10'>
             <Swiper
                 cssMode={true}
                 navigation={true}
@@ -20,7 +20,7 @@ const Slider = () => {
                 mousewheel={true}
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper"
+                className="mySwiper h-full"
             >
                 <SwiperSlide>
                     <div className="w-full md:h-[600px] text-white text-center">
@@ -67,7 +67,7 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full md:h-[600px] text-white text-center">
+                    <div className="w-full h-full md:h-[600px] text-white text-center">
                         <img className='w-full h-[600px] absolute rounded-xl' src={img5} alt="" />
                         <div className='relative top-[50%]'>
                             <h2 className='text-5xl '>

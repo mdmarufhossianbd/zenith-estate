@@ -3,6 +3,7 @@ import { IoEye, IoEyeOff } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PageTitle from "../../Components/PageTitle/PageTitle";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
@@ -52,7 +53,6 @@ const Register = () => {
                 result.user
                 updateUserProfile(name, photo, email)
                     .then(() => {
-
                         if (result.user) {
                             const toastMessage = () => toast.success("Your account Create Successfully");
                             toastMessage();
@@ -74,6 +74,7 @@ const Register = () => {
 
     return (
         <div className="bg-[#000000] bg-[url('https://i.ibb.co/D4p1Y1x/real-state-banner-2.png')] bg-blend-screen bg-cover bg-no-repeat lg:py-[10%] md:py-[20%] py-[20%]">
+            <PageTitle title="Register || Zenith Estate"></PageTitle>
             <ToastContainer />;
             <div className="xl:w-1/3 lg:w-1/2 md:w-1/2 mx-5 bg-[#49494985] lg:mx-auto md:mx-auto text-center p-10 rounded-md">
                 <h2 className="text-4xl text-white font-bold">Please Create an account</h2>

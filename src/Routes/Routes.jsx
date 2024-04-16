@@ -6,6 +6,8 @@ import Home from "../Pages/Home/Home";
 import House from "../Pages/House/House";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import SellOrRent from "../Pages/SellOrRent/SellOrRent";
+import UpdaeUserProfile from "../Pages/UpdaeUserProfile/UpdaeUserProfile";
 import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
@@ -20,8 +22,13 @@ const router = createBrowserRouter([
         loader: () => fetch('/Data/Data.json')
       },
       {
+        path: '/sellorrent',
+        element: <PrivateRoutes><SellOrRent></SellOrRent></PrivateRoutes>,
+        loader: () => fetch('/Data/Data.json')
+      },
+      {
         path: '/house/:id',
-        element: <PrivateRoutes><House></House>,</PrivateRoutes>,
+        element: <PrivateRoutes><House></House></PrivateRoutes>,
         loader: () => fetch('/Data/Data.json')
       },
       {
@@ -31,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/updateuserprofile',
+        element: <PrivateRoutes><UpdaeUserProfile></UpdaeUserProfile></PrivateRoutes>
       }
     ]
   },

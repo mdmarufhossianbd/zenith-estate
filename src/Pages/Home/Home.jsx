@@ -1,16 +1,21 @@
 import { useLoaderData } from "react-router-dom";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 import HouseCard from "../../Components/ResidentialHomes/HouseCard";
+<link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+
 import Slider from "../../Components/Slider/Slider";
 import icon1 from "../../assets/images/Icon (1).png";
 import icon2 from "../../assets/images/Icon.png";
 import icon3 from "../../assets/images/Iconicon (1).png";
 import house from "../../assets/images/one (3).jpg";
+
 const Home = () => {
 
     const houses = useLoaderData();
    
     return (
         <div>
+            <PageTitle title="Home Page || Zenith Estate"></PageTitle>
             <Slider></Slider>
             <div className="bg-[#E0DEF7] border-2 border-[E0DEF7] xl:px-[300px] md:px-[50px] lg:flex py-20">
                 <div className="md:flex flex-col justify-around">
@@ -41,7 +46,8 @@ const Home = () => {
                     <img className="rounded-3xl w-full md:px-10" src={house} alt="" />
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-center">
                 <h2 className="text-center my-10 font-semibold text-3xl">Discover your new property.</h2>
             </div>
             <div className="max-w-7xl lg:mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-10 my-10 mx-5">
