@@ -48,9 +48,9 @@ const Footer = () => {
                 <div>
                     <h2 className="font-medium text-xl mb-4">Contact</h2>
                     <p>Total Free Customer Care</p>
-                    <p className="py-2">+(088) 123 456 789</p>
+                    <p className="py-2">+(880) 123 456 789</p>
                     <h2 className="font-medium text-xl my-4">Live Support</h2>
-                    <p>hi@zenithestate.com</p>
+                    <p>info@zenithestate.com</p>
 
                 </div>
                 <div className="flex flex-col">

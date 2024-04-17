@@ -1,5 +1,6 @@
 import 'animate.css';
 import { useLoaderData } from "react-router-dom";
+import OurTeam from '../../Components/OurTeam/OurTeam';
 import PageTitle from "../../Components/PageTitle/PageTitle";
 import HouseCard from "../../Components/ResidentialHomes/HouseCard";
 import Slider from "../../Components/Slider/Slider";
@@ -36,6 +37,15 @@ const Home = () => {
                 {
                     houses.map(house => <HouseCard key={house.id} house={house}></HouseCard>)
                 }
+            </div>
+            <div className='mb-20'>
+                <div data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-duration="2000">
+                    <h2 className="text-center my-10 font-semibold text-3xl">About Our Team</h2>
+                </div>
+                <OurTeam></OurTeam>
             </div>
         </div>
     );

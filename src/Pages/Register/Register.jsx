@@ -12,7 +12,7 @@ const Register = () => {
     const navigate = useNavigate();
     const [registerError, setRegisterError] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-
+    console.log(registerError);
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
