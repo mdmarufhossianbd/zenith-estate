@@ -29,7 +29,7 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div>
-                    <Link className="font-bold text-3xl" to={'/'}>Zenith Estate</Link>
+                    <Link className="font-bold text-3xl hover:text-[#5245ED]" to={'/'}>Zenith Estate</Link>
                 </div>
                 <div>
                     <div className="list-none font-semibold lg:flex gap-4 hidden">

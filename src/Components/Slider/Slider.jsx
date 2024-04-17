@@ -4,15 +4,11 @@ import 'swiper/css/pagination';
 import { Keyboard, Mousewheel, Navigation, Pagination, } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import img1 from '../../assets/images/025.jpg';
-import img3 from '../../assets/images/050.jpg';
-import img4 from '../../assets/images/103.jpg';
-import img5 from '../../assets/images/113.jpg';
-import img2 from './../../assets/images/028.jpg';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
     return (
-        <div className='xl:px-[300px] h-full lg:px-[200px] md:px-[10%] px-[5%] bg-[#F3F3FA] py-10'>
+        <div data-aos="zoom-in-down" data-aos-duration="2000" className='xl:px-[300px] h-full lg:px-[200px] md:px-[10%] px-[5%] bg-[#F3F3FA] py-10'>
             <Swiper
                 cssMode={true}
                 navigation={true}
@@ -23,60 +19,30 @@ const Slider = () => {
                 className="mySwiper h-full"
             >
                 <SwiperSlide>
-                    <div className="w-full md:h-[600px] text-white text-center">
-                        <img className='w-full h-[600px] absolute rounded-xl' src={img1} alt="" />
-                        <div className='relative top-[50%]'>
-                            <h2 className='text-5xl '>
-                                this is Slider 1.
-                            </h2>
-                            <button className='bg-red-500 p-5'>Book Now</button>
+                    <div className="w-full h-full bg-[#222222a4] bg-[url('/src/assets/images/025.jpg')] bg-blend-screen bg-cover bg-no-repeat rounded-lg text-white text-center">
+                        <div className='md:py-[250px] py-[180px]'>
+                            <h2 className='text-5xl pb-10 font-semibold'>Modern City Apartment</h2>
+                            <Link to={'/sellorrent'}><button className='bg-red-500 px-6 py-3 rounded text-white'>Find Now</button></Link>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full md:h-[600px] text-white text-center">
-                        <img className='w-full h-[600px] absolute rounded-xl' src={img2} alt="" />
-                        <div className='relative top-[50%]'>
-                            <h2 className='text-5xl '>
-                                this is Slider 2.
-                            </h2>
-                            <button className='bg-red-500 p-5'>Book Now</button>
+                    <div className="w-full h-full bg-[#222222a4] bg-[url('/src/assets/images/028.jpg')] bg-blend-screen bg-cover bg-no-repeat rounded-lg text-white text-center">
+                        <div className='md:py-[250px] py-[180px]'>
+                            <h2 className='text-5xl pb-10 font-semibold'>Spacious Family Villa</h2>
+                            <Link to={'/sellorrent'}><button className='bg-red-500 px-6 py-3 rounded text-white'>Find Now</button></Link>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full md:h-[600px] text-white text-center">
-                        <img className='w-full h-[600px] absolute rounded-xl' src={img3} alt="" />
-                        <div className='relative top-[50%]'>
-                            <h2 className='text-5xl '>
-                                this is Slider 3.
-                            </h2>
-                            <button className='bg-red-500 p-5'>Book Now</button>
+                    <div className="w-full h-full bg-[#222222a4] bg-[url('/src/assets/images/050.jpg')] bg-blend-screen bg-cover bg-no-repeat rounded-lg text-white text-center">
+                        <div className='md:py-[250px] py-[180px]'>
+                            <h2 className='text-5xl pb-10 font-semibold'>Charming Suburban Cottage</h2>
+                            <Link to={'/sellorrent'}><button className='bg-red-500 px-6 py-3 rounded text-white'>Find Now</button></Link>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <div className="w-full md:h-[600px] text-white text-center">
-                        <img className='w-full h-[600px] absolute rounded-xl' src={img4} alt="" />
-                        <div className='relative top-[50%]'>
-                            <h2 className='text-5xl '>
-                                this is Slider 4.
-                            </h2>
-                            <button className='bg-red-500 p-5'>Book Now</button>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="w-full h-full md:h-[600px] text-white text-center">
-                        <img className='w-full h-[600px] absolute rounded-xl' src={img5} alt="" />
-                        <div className='relative top-[50%]'>
-                            <h2 className='text-5xl '>
-                                this is Slider 5.
-                            </h2>
-                            <button className='bg-red-500 p-5'>Book Now</button>
-                        </div>
-                    </div>
-                </SwiperSlide>
+               
                 
 
             </Swiper>

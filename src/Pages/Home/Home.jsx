@@ -46,8 +46,9 @@ const Home = () => {
                     <img className="rounded-3xl w-full md:px-10" src={house} alt="" />
                 </div>
             </div>
-            <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-center">
+            <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                 <h2 className="text-center my-10 font-semibold text-3xl">Discover your new property.</h2>
             </div>
             <div className="max-w-7xl lg:mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-10 my-10 mx-5">

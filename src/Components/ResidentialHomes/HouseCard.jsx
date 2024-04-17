@@ -5,7 +5,7 @@ const HouseCard = ({ house }) => {
     const { id, image, estate_title,price, status, area, location,} = house;
 
     return (
-        <div className="w-full bg-[#E0DEF7] p-4 rounded-lg">
+        <div data-aos="zoom-in-down" className="w-full bg-[#E0DEF7] p-4 rounded-lg hover:{data-aos='zoom-in'}">
             <button className="bg-[#9c0bb9] text-white px-3 py-1 rounded absolute">{status}</button>
             <img className="w-full h-[350px] rounded-lg" src={image} alt="" />
             <h2 className="text-xl font-medium py-2">{estate_title}</h2>
