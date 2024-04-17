@@ -76,7 +76,7 @@ const Register = () => {
         <div className="bg-[#000000] bg-[url('https://i.ibb.co/D4p1Y1x/real-state-banner-2.png')] bg-blend-screen bg-cover bg-no-repeat lg:py-[10%] md:py-[20%] py-[20%]">
             <PageTitle title="Register || Zenith Estate"></PageTitle>
             <ToastContainer />;
-            <div className="xl:w-1/3 lg:w-1/2 md:w-1/2 mx-5 bg-[#49494985] lg:mx-auto md:mx-auto text-center p-10 rounded-md">
+            <div data-aos="zoom-in" data-aos-duration="1000" className="xl:w-1/3 lg:w-1/2 md:w-1/2 mx-5 bg-[#49494985] lg:mx-auto md:mx-auto text-center p-10 rounded-md">
                 <h2 className="text-4xl text-white font-bold">Please Create an account</h2>
                 <hr className="mx-[20%] my-5" />
                 <form onSubmit={handleRegister} >

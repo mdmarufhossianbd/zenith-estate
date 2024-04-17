@@ -1,10 +1,10 @@
+import 'animate.css';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Keyboard, Mousewheel, Navigation, Pagination, } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { Link } from 'react-router-dom';
 
 const Slider = () => {
     return (
@@ -20,9 +20,9 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <div className="w-full h-full bg-[#222222a4] bg-[url('/src/assets/images/025.jpg')] bg-blend-screen bg-cover bg-no-repeat rounded-lg text-white text-center">
-                        <div className='md:py-[250px] py-[180px]'>
-                            <h2 className='text-5xl pb-10 font-semibold'>Modern City Apartment</h2>
-                            <Link to={'/sellorrent'}><button className='bg-red-500 px-6 py-3 rounded text-white'>Find Now</button></Link>
+                        <div className='animate__bounce animate__delay-2s md:py-[250px] py-[180px]'>
+                            <h2 className='text-5xl pb-10 font-semibold '>Modern City Apartment</h2>
+                            <Link to={'/sellorrent'}><button className='bg-[#5245ED] px-6 py-3 rounded text-white hover:bg-[#100A55]'>Find Now</button></Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -30,7 +30,7 @@ const Slider = () => {
                     <div className="w-full h-full bg-[#222222a4] bg-[url('/src/assets/images/028.jpg')] bg-blend-screen bg-cover bg-no-repeat rounded-lg text-white text-center">
                         <div className='md:py-[250px] py-[180px]'>
                             <h2 className='text-5xl pb-10 font-semibold'>Spacious Family Villa</h2>
-                            <Link to={'/sellorrent'}><button className='bg-red-500 px-6 py-3 rounded text-white'>Find Now</button></Link>
+                            <Link to={'/sellorrent'}><button className='bg-[#5245ED] px-6 py-3 rounded text-white hover:bg-[#100A55]'>Find Now</button></Link>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -38,7 +38,7 @@ const Slider = () => {
                     <div className="w-full h-full bg-[#222222a4] bg-[url('/src/assets/images/050.jpg')] bg-blend-screen bg-cover bg-no-repeat rounded-lg text-white text-center">
                         <div className='md:py-[250px] py-[180px]'>
                             <h2 className='text-5xl pb-10 font-semibold'>Charming Suburban Cottage</h2>
-                            <Link to={'/sellorrent'}><button className='bg-red-500 px-6 py-3 rounded text-white'>Find Now</button></Link>
+                            <Link to={'/sellorrent'}><button className='bg-[#5245ED] px-6 py-3 rounded text-white hover:bg-[#100A55]'>Find Now</button></Link>
                         </div>
                     </div>
                 </SwiperSlide>

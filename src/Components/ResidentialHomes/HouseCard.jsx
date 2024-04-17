@@ -5,9 +5,9 @@ const HouseCard = ({ house }) => {
     const { id, image, estate_title,price, status, area, location,} = house;
 
     return (
-        <div data-aos="zoom-in-down" className="w-full bg-[#E0DEF7] p-4 rounded-lg hover:{data-aos='zoom-in'}">
+        <div data-aos="zoom-in-down" data-aos-duration="2000" className="w-full bg-[#E0DEF7] p-4 rounded-lg hover:{data-aos='zoom-in'}">
             <button className="bg-[#9c0bb9] text-white px-3 py-1 rounded absolute">{status}</button>
-            <img className="w-full h-[350px] rounded-lg" src={image} alt="" />
+            <img className="w-full h-[350px] rounded-lg hover:scale-125 duration-1000" src={image} alt="" />
             <h2 className="text-xl font-medium py-2">{estate_title}</h2>
             <div className="flex justify-between items-center pb-3">
                 <p className="text-lg font-medium">{price}</p>
